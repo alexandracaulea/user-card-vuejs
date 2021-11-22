@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Profile Card in Vue.js</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://unpkg.com/vue@next" defer></script>
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <main class="container" id="user-card">
+      <div class="card">
+        <img v-bind:src="imageURL" alt="User image" class="card__image" />
+        <div class="card__text">
+          <h2>{{ name }}</h2>
+          <p>{{ introText }}</p>
+        </div>
+        <ul class="card__info">
+          <li>
+            <span class="card__info__stats">{{ numOfPosts }}</span>
+            <span>posts</span>
+          </li>
+          <li>
+            <span class="card__info__stats">{{ numOfFollowers }}</span>
+            <span>followers</span>
+          </li>
+          <li>
+            <span class="card__info__stats">{{ numOfFollowing }}</span>
+            <span>following</span>
+          </li>
+        </ul>
+        <div class="card__action">
+          <button class="card__action__button card__action--follow">follow</button>
+          <button class="card__action__button card__action--message">message</button>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
